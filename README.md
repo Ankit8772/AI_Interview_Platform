@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 AI Interview Platform
 
-## Getting Started
+An **AI-powered interview preparation platform** that helps users practice technical and behavioral interviews through **voice-based conversation**.  
+The voice agent is powered by **[VAPI](https://vapi.ai/)** for real-time speech recognition, natural language understanding, and conversational flow.  
 
-First, run the development server:
+🚀 **Live Demo:** [ai-interview-platform-flax.vercel.app](https://ai-interview-platform-flax.vercel.app/interview)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🎙 **Voice-Based Interviews** – Conduct realistic mock interviews with a conversational AI agent.
+- 🧠 **AI-Powered Questioning** – Dynamic, context-aware questions tailored to the user's responses.
+- 📊 **Performance Feedback** – Instant evaluation and suggestions for improvement.
+- 🔒 **Authentication** – Secure sign-in/sign-up with persistent session storage.
+- 📂 **Interview History** – Store and review past interviews for progress tracking.
+- ☁ **Cloud Deployment** – Hosted on [Vercel](https://vercel.com/) for global accessibility.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend**
+- [Next.js 15](https://nextjs.org/) – React framework with App Router
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first styling
+- [ShadCN/UI](https://ui.shadcn.com/) – Reusable UI components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Backend**
+- [Firebase Firestore](https://firebase.google.com/docs/firestore) – NoSQL database
+- [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction) – Serverless functions
+- [VAPI](https://vapi.ai/) – AI-powered voice agent API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Other**
+- TypeScript for type safety
+- Serverless architecture on Vercel
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ai-interview-platform/
+├── app/ # Next.js App Router pages
+│ ├── interview/ # Interview-related routes
+│ ├── sign-in/ # Authentication pages
+│ ├── sign-up/
+│ └── api/ # API routes (VAPI, Firestore)
+├── lib/ # Shared utilities & actions
+├── components/ # UI components
+├── public/ # Static assets
+└── README.md
