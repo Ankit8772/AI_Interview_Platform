@@ -173,38 +173,3 @@ export async function isAuthenticated(): Promise<boolean> {
     const user = await getCurrentUser();
     return !!user;
 }
-
-// ==== GET INTERVIEWS BY USER ====
-export async function getInterviewByUserId(userId: string): Promise<Interview[] | null> {
-    if (!userId) {
-        throw new Error("userId is required for getInterviewByUserId");
-    }
-
-    const interviewsSnap = await db
-        .collection('interviews')
-        .where('userId', '==', userId)
-        .orderBy('createdAt', 'desc')
-        .get();
-
-    return interviewsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Interview[];
-}
-
-// ==== GET LATEST INTERVIEWS ====
-export async function getLatestInterviews(params: GetLatestInterviewsParams): Promise<Interview[] | null> {
-    const { userId, limit = 20 } = params;
-
-    let queryRef: FirebaseFirestore.Query = db
-        .collection('interviews')
-        .where('finalized', '==', true)
-        .orderBy('createdAt', 'desc')
-        .limit(limit);
-
-    // Only filter out the current user's interviews if userId is defined
-    if (userId) {
-        queryRef = queryRef.where('userId', '!=', userId);
-    }
-
-    const interviewsSnap = await queryRef.get();
-
-    return interviewsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Interview[];
-}
