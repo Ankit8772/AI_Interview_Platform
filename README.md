@@ -3,7 +3,7 @@
 An **AI-powered interview preparation platform** that helps users practice technical and behavioral interviews through **voice-based conversation**.  
 The voice agent is powered by **[VAPI](https://vapi.ai/)** for real-time speech recognition, natural language understanding, and conversational flow.  
 
-🚀 **Live Demo:** [ai-interview-platform-flax.vercel.app](https://ai-interview-platform-flax.vercel.app/interview)
+🚀 **Live Demo:** [ai-interview-platform-flax.vercel.app](https://ai-interview-platform-flax.vercel.app/sign-up)
 
 ---
 
